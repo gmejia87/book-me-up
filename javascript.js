@@ -1,3 +1,14 @@
+//current date display
+var dayNames = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
 //hours in scheduler
 var hoursArray = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 var container = document.querySelector(".container");
@@ -46,11 +57,6 @@ function getHours(hours) {
 
 //current date display at top of page
 var currentDate = document.querySelector("#currentDay");
-
-var date = function (rightNow) {
-  var rightNow = moment().format("MMMM Do");
-  console.log(rightNow);
-};
 
 //text area in scheduler
 
