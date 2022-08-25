@@ -21,7 +21,7 @@ https://gmejia87.github.io/book-me-up/
 
 ## Preview
 
-![musicenvivo](https://user-images.githubusercontent.com/50350162/185821209-20528f3f-82f5-4b48-aa37-cf8346811738.gif)
+![book-me-up preview](https://user-images.githubusercontent.com/108241017/186552994-ed866bda-e044-44b7-b8b7-19deb87c81ec.png)
 
 ## Contributors
 
