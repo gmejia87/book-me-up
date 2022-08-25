@@ -1,13 +1,12 @@
 //current date display
-var dayNames = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+var currentDate = document.querySelector("#currentDay");
+var currentHour = new Date().getHours();
+
+currentDate.textContent = new Date().toLocaleString("en-US", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+});
 
 //hours in scheduler
 var hoursArray = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
@@ -19,10 +18,25 @@ for (var i = 0; i < hoursArray.length; i++) {
   timeBlock.innerHTML = `<div class="col-md-1 hour">${getHours(
     hoursArray[i]
   )}</div>
-    <textarea class="col-md-10 description"></textarea>
-    <button class="col-md-1 saveBtn btn"><i class="fa-solid fa-floppy-disk"></i></button>`;
+    <textarea class="col-md-10 description ${getClass(hoursArray[i])}">${
+    localStorage.getItem(hoursArray[i]) || ""
+  }</textarea>
+    <button class="col-md-1 saveBtn btn" id="${
+      hoursArray[i]
+    }"><i class="fa-solid fa-floppy-disk"></i></button>`;
   container.append(timeBlock);
 }
+
+var buttonsArray = document.querySelectorAll(".saveBtn");
+
+buttonsArray.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    localStorage.setItem(
+      e.currentTarget.id,
+      e.currentTarget.previousElementSibling.value
+    );
+  });
+});
 
 function getHours(hours) {
   switch (hours) {
@@ -55,12 +69,15 @@ function getHours(hours) {
   }
 }
 
-//current date display at top of page
-var currentDate = document.querySelector("#currentDay");
-
-//text area in scheduler
-
-//time blocks
+function getClass(hour) {
+  if (hour < currentHour) {
+    return "past";
+  } else if (hour == currentHour) {
+    return "present";
+  } else {
+    return "future";
+  }
+}
 
 //saving scheduled timeblocks
 
