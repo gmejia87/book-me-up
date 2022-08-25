@@ -16,12 +16,9 @@ Need a digital way to keep track of your daily during work hours tasks? Book Me 
 
 ## Website Link
 
-Book Me Up site link:
 https://gmejia87.github.io/book-me-up/
 
 ## Preview
-
-![musicenvivo](https://user-images.githubusercontent.com/50350162/185821209-20528f3f-82f5-4b48-aa37-cf8346811738.gif)
 
 ## Contributors
 
