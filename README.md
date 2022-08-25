@@ -20,6 +20,8 @@ https://gmejia87.github.io/book-me-up/
 
 ## Preview
 
+![book-me-up preview](https://user-images.githubusercontent.com/108241017/186552994-ed866bda-e044-44b7-b8b7-19deb87c81ec.png)
+
 ## Contributors
 
 Graciela Mejia
